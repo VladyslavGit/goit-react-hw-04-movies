@@ -1,0 +1,82 @@
+.btn {
+  box-shadow: inset 0px 1px 3px 0px rgb(46, 51, 50);
+  background: linear-gradient(to bottom,
+      rgb(118, 141, 135) 5%,
+      rgb(108, 124, 124) 100%);
+  background-color: rgb(39, 26, 26);
+  border-radius: 10px;
+  border: 1px solid rgb(43, 53, 50);
+  cursor: pointer;
+  color: rgb(255, 254, 254);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 11px 23px;
+  text-shadow: 0px -1px 0px rgb(43, 102, 94);
+  margin: 20px;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #3b4242 5%, #668a80 100%);
+}
+
+.movieWrapper {
+  display: flex;
+}
+
+.posterWrapper {
+  width: 500px;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.movieInfoWrapper {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+p,
+span,
+.movieTitle {
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 1.6;
+  font-size: 20px;
+  width: 64%;
+  margin-left: 20px;
+}
+
+.movieTitle {
+  font-size: 30px;
+}
+
+.movieScore,
+.movieOverview,
+.movieGenres,
+.additionalInfo {
+  font-size: 20px;
+}
+
+.additionalInfo {
+  margin-bottom: 8px;
+  line-height: auto;
+}
+
+.additionalInfoList {
+  list-style: none;
+  line-height: 30px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.additionalInfoList a {
+  text-decoration: none;
+  color: white;
+}
+
+.additionalBtn {
+  composes: btn;
+  margin: 8px;
+  width: 120px;
+}

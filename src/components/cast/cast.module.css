@@ -1,0 +1,10 @@
+.actorPhoto {
+  width: 70%;
+}
+
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  list-style: none;
+}
