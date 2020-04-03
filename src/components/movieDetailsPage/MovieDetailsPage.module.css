@@ -20,21 +20,15 @@
   background: linear-gradient(to bottom, #3b4242 5%, #668a80 100%);
 }
 
-.movieWrapper {
-  display: flex;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .posterWrapper {
-  width: 500px;
-  margin-left: 20px;
+  margin: 0 20px;
   padding: 0;
-}
-
-.movieInfoWrapper {
-  width: 700px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 100px;
 }
 
 p,
@@ -42,8 +36,6 @@ span,
 .movieTitle {
   font-family: "Roboto", "Arial", sans-serif;
   line-height: 1.6;
-  font-size: 20px;
-  width: 64%;
   margin-left: 20px;
 }
 
@@ -79,4 +71,36 @@ span,
   composes: btn;
   margin: 8px;
   width: 120px;
+}
+
+@media (min-width: 768px) {
+  .movieInfoWrapper {
+    margin-left: 100px;
+  }
+
+  p,
+  span,
+  .movieTitle {
+    font-size: 20px;
+    width: 70%;
+  }
+
+  .movieTitle {
+    font-size: 30px;
+  }
+
+  .movieWrapper {
+    display: flex;
+  }
+
+  .movieInfoWrapper {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .posterWrapper {
+    width: 500px;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import services from "../services";
-import css from "./cast.module.css";
+import styles from "./cast.module.css";
 
 class Cast extends Component {
   state = { cast: [] };
@@ -15,26 +15,25 @@ class Cast extends Component {
   render() {
     const { cast } = this.state;
     return (
-      <div className={css.castWrapper}>
-        <ul className={css.castList}>
-          {cast.map(cast => (
-            <li className={css.castListItem} key={cast.cast_id}>
-              <p>Character:</p>
-              <p>{cast.character}</p>
-              <img className={css.actorPhoto}
-                src={
-                  cast.profile_path
-                    ? `https://image.tmdb.org/t/p/w500/${cast.profile_path}`
-                    : "https://lh3.googleusercontent.com/proxy/dU7LkRtsQVaZ2PzcPnzMO63OYQ8wr9hoRQUBUyUHJVOxl_3judSWdChNR-Z3fycnyiqhU1ouixIlTl_VloK7viArt1IG6Yk"
-                }
-                alt={cast.name}
-              />
-              <p>Performed by:</p>
-              <p>{cast.name}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className={styles.castList}>
+        {cast.map(cast => (
+          <li className={styles.castListItem} key={cast.cast_id}>
+            <p className={styles.parCast}>Character:</p>
+            <p className={styles.parCastName}>{cast.character}</p>
+            <img
+              className={styles.actorPhoto}
+              src={
+                cast.profile_path
+                  ? `https://image.tmdb.org/t/p/w500/${cast.profile_path}`
+                  : "https://www.trippywords.com/public/blog_img/no_img.jpg"
+              }
+              alt={cast.name}
+            />
+            <p className={styles.parCast}>Performed by:</p>
+            <p className={styles.parCastName}>{cast.name}</p>
+          </li>
+        ))}
+      </ul>
     );
   }
 }

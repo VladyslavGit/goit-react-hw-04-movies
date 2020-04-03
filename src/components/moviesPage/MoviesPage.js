@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import queryString from "query-string";
 import services from "../services";
 import SearchBar from "../searchBar/SearchBar";
-import css from "./MoviesPage.module.css";
+import styles from "./MoviesPage.module.css";
 
 export default class MoviesPage extends Component {
   state = {
@@ -39,11 +39,11 @@ export default class MoviesPage extends Component {
   render() {
     const { movies, query } = this.state;
     return (
-      <div className={css.moviesWrapper}>
+      <div className={styles.moviesWrapper}>
         <SearchBar onSearch={this.onSearch} onChange={this.onChange} />
-        <ul className={css.resultList}>
+        <ul className={styles.resultList}>
           {movies.map(movie => (
-            <li className={css.resultListItem} key={movie.id}>
+            <li className={styles.resultListItem} key={movie.id}>
               <Link
                 to={{
                   pathname: `/movies/${movie.id}`,

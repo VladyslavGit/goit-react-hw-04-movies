@@ -13,8 +13,8 @@ class Reviews extends Component {
 
   render() {
     const { reviews } = this.state;
-    return (
-      <div>
+    if (reviews.length > 0) {
+      return (
         <ul>
           {reviews.map(review => (
             <li key={review.id}>
@@ -23,8 +23,10 @@ class Reviews extends Component {
             </li>
           ))}
         </ul>
-      </div>
-    );
+      );
+    } else {
+      return <p>No reviews found</p>;
+    }
   }
 }
 

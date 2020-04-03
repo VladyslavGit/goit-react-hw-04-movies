@@ -2,9 +2,24 @@
   width: 70%;
 }
 
+.castListItem {
+  width: 400px;
+  border-bottom: 1px solid white;
+}
+
 .castList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: space-between;
   list-style: none;
+}
+
+.parCast {
+  margin: 10px 0;
+  width: 90%;
+}
+
+.parCastName {
+  margin-top: 10px;
+  width: 90%;
 }
